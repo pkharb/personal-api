@@ -1,0 +1,22 @@
+pk_personal_api (testing) :
+--------------------------------------------------
+books
+- find all    (get)(index)      - 
+- make new    (post)(create)    - 
+- find a book (get /:id) (show) - 
+- change file (patch)(update)   - 
+- replace file(put)(replace)    - 
+- delete file (delete)(destroy) - 
+--------------------------------------------------
+authors
+- find all    (get)(index)      - 
+- make new    (post)(create)    - 
+- find a book (get /:id) (show) - 
+- change file (patch)(update)   - 
+- replace file(put)(replace)    - 
+- delete file (delete)(destroy) - 
+--------------------------------------------------
+
+kill all processes on a port
+- kill $(lsof -t -i :3000)
+--------------------------------------------------
