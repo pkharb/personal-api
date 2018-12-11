@@ -1,20 +1,12 @@
 pk_personal_api (testing) :
 --------------------------------------------------
-books
-- find all    (get)(index)      - 
-- make new    (post)(create)    - 
-- find a book (get /:id) (show) - 
-- change file (patch)(update)   - 
+projects
+- find all    (get)(index)      - done
+- make new    (post)(create)    - done
+- find a book (get /:id) (show) - done
+- change file (patch)(update)   - done
 - replace file(put)(replace)    - 
-- delete file (delete)(destroy) - 
---------------------------------------------------
-authors
-- find all    (get)(index)      - 
-- make new    (post)(create)    - 
-- find a book (get /:id) (show) - 
-- change file (patch)(update)   - 
-- replace file(put)(replace)    - 
-- delete file (delete)(destroy) - 
+- delete file (delete)(destroy) - done
 --------------------------------------------------
 
 kill all processes on a port

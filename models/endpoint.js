@@ -1,6 +1,6 @@
 module.exports = {
     documentation_url : 'https://github.com/pkharb/personal-api.git',
-    base_url :'',
+    base_url :'xxx',
     endpoints: [
         {
             method: "GET",
@@ -32,6 +32,11 @@ module.exports = {
             path: "/api/projects/:id",
             description: "Delete a project"
         },
+        {
+            method: "GET",
+            path: "/api/info",
+            description: "Index of all the routes"
+        }
 
     ]
 }

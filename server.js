@@ -1,3 +1,28 @@
+require('dotenv').config();
+
 const express = require('express'),
       app = express(),
-      PORT = process.env.PORT || 3000;
+      PORT = process.env.PORT || 3000,
+      routesInfo = require('./models/endpoint');
+
+
+// database connection
+require('./db');
+
+// app middleware
+app.use(express.json());
+
+// routes
+const projectRouter = require('./routers/projectRouter');
+const profileRouter = require('./routers/profileRouter');
+
+app.use('/api/projects', projectRouter);
+app.use('/api/profile', profileRouter);
+app.use('/api/info', (req, res) => {
+    res.json({ success: true, routesInfo});
+});
+
+// listen on PORT
+app.listen(PORT, err => {
+    console.log(err || `server listening to ${PORT}`);
+});
