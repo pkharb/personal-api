@@ -57,3 +57,29 @@ $("#but-3").click(function() {
 
     })
 })
+
+$("#form-1").submit(function(evt){
+    evt.preventDefault();
+    
+    let project = {
+        name: $("#name").val(),
+        languages: $("#lang").val(),
+        dateCreated: $("#date").val(),
+        status: $("#status").val()
+    }
+    axios.post('/api/projects', project)
+    .then(apiResponse => {
+        console.log(apiResponse);
+        let outputBox = $('#output-list');
+        outputBox.html('');
+    
+            //console.log(p);
+            outputBox.append(
+                `<li>Name : ${apiResponse.data.newProject.name} </li>
+                <li>Languages : ${apiResponse.data.newProject.languages} </li>
+                <li>Created On : ${apiResponse.data.newProject.dateCreated} </li>
+                <li>Status : ${apiResponse.data.newProject.status} </li>
+                `)
+            
+    })
+})
