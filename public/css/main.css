@@ -9,6 +9,10 @@ body{
     height: 100px;
     background: #000;
 }
+.nav-items a{
+    color: #fff;
+    text-decoration: none;
+}
 .nav-items{
     text-align: center;
     padding-top: 6%;
@@ -37,14 +41,23 @@ main{
     width: 40%;
     background: #f00;
 }
-.output-box{
+#output-box{
     height: 350px;
     width: 40%;
     background: #0f0;
+    text-align: center;
+    overflow: scroll;
+}
+#output-box ul{
+    /* background: #00f; */
+    /* text-align: center; */
+}
+#output-list li{
+    list-style: none;
+    padding-top: 5px;
+    border-bottom: 2px solid #000;
 }
 
-/* FOOTER */
-/* FOOTER */
 .footer-wrapper{
     height: 75px;
     background: #000;

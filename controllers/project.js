@@ -10,7 +10,7 @@ module.exports = {
     create: (req, res) => {
         Project.create(req.body, (err, newProject) => {
             if (err) res.json({ success: false, err});
-                     res.json({ newProject});
+                     res.json({ success: true, newProject});
         });
     },
     show: (req, res) => {
